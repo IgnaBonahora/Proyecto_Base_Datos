@@ -12,7 +12,7 @@ public class Main{
 			
 			String entrada = lector.nextLine();
 			char opcion = entrada.charAt(0);
-			if (opcion <= '3' || opcion >= '1'){
+			if ( opcion >= '1' && opcion <= '3'){
 				if(opcion == '1'){
 					sistema.ingresarUsuario();
 				}else if(opcion == '2'){
