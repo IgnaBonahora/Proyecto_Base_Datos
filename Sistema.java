@@ -21,7 +21,7 @@ public class Sistema {
 		
 	}
 
-	public String listarReclamos(){
+	public void listarReclamos(){
 		
 		
 	}

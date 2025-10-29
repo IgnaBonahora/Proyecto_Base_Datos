@@ -1,26 +1,34 @@
+import java.util.Scanner;
+
 public class Main{
 
-	public static void Main(Stirng [] args){
-		new Sistema sitema = new Sistema()
+	public static void main(String [] args){
+		Scanner lector = new Scanner(System.in);
+		Sistema sistema = new Sistema();
 		boolean termina = true;
 		while(termina){
 			
 			sistema.pantallaPrincipal();
 			
-			int opcion = capturarEntrada();
-			
-			if (opcion > 3 || opcion < 1){
-				if(opcion == 1){
-					sistema,ingresarUsuario();
-				}else if(opcion == 2){
+			String entrada = lector.nextLine();
+			char opcion = entrada.charAt(0);
+			if (opcion <= '3' || opcion >= '1'){
+				if(opcion == '1'){
+					sistema.ingresarUsuario();
+				}else if(opcion == '2'){
 					sistema.eliminarReclamo();
 				}else {
 					sistema.listarReclamos();
 				}
 			}else{
+				System.out.println();
+				System.out.println("---Cerrando Sistema---");
+				System.out.println();
 				termina = false;
 			}
-			
+
 		}
+
+		lector.close();
 	}
 }
